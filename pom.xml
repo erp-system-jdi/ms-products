@@ -8,6 +8,7 @@
 		<version>0.0.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<artifactId>ms-produto</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ms-produto</name>
