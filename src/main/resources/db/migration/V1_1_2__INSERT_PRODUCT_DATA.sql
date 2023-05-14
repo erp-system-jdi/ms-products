@@ -1,0 +1,1 @@
+INSERT INTO db_03_products_ms.tb_01_product (id, description, active, name, quantity_in_stock, sale_unit, unit_price) VALUES(0x5489AC9EABAE4C71898A042717221691, 'Celular', 1, 'Celular Xiaomi Redmi 9', 0, 2, 1500.0);
