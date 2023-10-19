@@ -1,9 +1,5 @@
 server:
-  port: ${PRODUCTS_PORT:8082}
-
-logging:
-  level:
-    br.com.erpsystem: DEBUG
+  port: 8082
 
 spring:
   flyway:
@@ -11,33 +7,16 @@ spring:
     baseline-on-migrate: true
   application:
       name: ms-products
-  #  rabbitmq:
-  #    host: ${RABBITMQ_HOST:localhost}
-  #    username: ${RABBITMQ_USERNAME:guest}
-  #    password: ${RABBITMQ_PASSWORD:guest}
-  #    port: ${RABBITMQ_PORT:5672}
-  #    listener:
-  #      simple:
-  #        max-concurrency: 2
-  #    connection-timeout: 1000
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: ${MYSQL_HOST:jdbc:mysql://localhost:3306/db_01_customer_ms}
-    username: ${MYSQL_USERNAME:customer-user}
-    password: ${MYSQL_PASSWORD:password}
+    url: ${MYSQL_HOST}
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
   jpa:
     hibernate:
-      ddl-auto: create-drop
-    show-sql: true
+      ddl-auto: none
+    show-sql: false
     open-in-view: false
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
-
-services:
-  ms-customer:
-    url: ${MS_CUSTOMER:http://localhost:8080/api/v1/customer}
-  ms-product:
-    url: ${MS_PRODUCT:http://localhost:8081/api/v1/products}
-
-

@@ -1,13 +1,13 @@
-package br.com.erpsystem.msproduto;
+package br.com.erpsystem.msproduct;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MsProdutoApplicationTests {
+class MsProductApplicationTest {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
